@@ -1,0 +1,10 @@
+{
+  "bundle": "asset-review",
+  "screens": ["내 자산 등록", "운영자 검수"],
+  "stage": "done",
+  "gates": { "G1": "passed", "G2": "passed", "G3": "skipped (컨셉은 skill-library에서 확정)", "S5": "passed (프레임 검사 포함)" },
+  "g3_approved": true,
+  "g3_note": "작업자가 skill-library에서 확정한 컨셉의 재사용을 확인함 (2026-09-29)",
+  "concept_from": "skill-library",
+  "failures": { "S1": 0, "S2": 0, "S4": 0, "S5": 0 }
+}

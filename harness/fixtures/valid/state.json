@@ -1,0 +1,12 @@
+{
+  "bundle": "fixture",
+  "screens": [
+    "스킬 라이브러리",
+    "내 자산 등록",
+    "운영자 검수"
+  ],
+  "stage": "S5",
+  "gates": {},
+  "g3_approved": true,
+  "failures": {}
+}

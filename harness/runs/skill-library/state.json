@@ -1,0 +1,21 @@
+{
+  "bundle": "skill-library",
+  "screens": [
+    "스킬 라이브러리"
+  ],
+  "stage": "done",
+  "gates": {
+    "G1": "passed",
+    "G2": "passed",
+    "G3": "passed",
+    "S5": "passed"
+  },
+  "g3_approved": true,
+  "failures": {
+    "S1": 0,
+    "S2": 0,
+    "S3": 0,
+    "S4": 0,
+    "S5": 0
+  }
+}

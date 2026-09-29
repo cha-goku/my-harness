@@ -1,0 +1,617 @@
+[
+  {
+    "id": "G1-1",
+    "check": "g1",
+    "file": "research/01-references.md",
+    "op": "text_replace",
+    "args": [
+      "- [R5]",
+      "- (R5)"
+    ],
+    "expect": "G1-1"
+  },
+  {
+    "id": "G1-2",
+    "check": "g1",
+    "file": "research/01-references.md",
+    "op": "text_replace",
+    "args": [
+      "https://uibowl.io/example/2",
+      "https://example.com/2"
+    ],
+    "expect": "G1-2"
+  },
+  {
+    "id": "G1-3",
+    "check": "g1",
+    "file": "research/02-analysis.md",
+    "op": "text_set",
+    "args": [
+      "# 분석\n"
+    ],
+    "expect": "G1-3"
+  },
+  {
+    "id": "G1-4",
+    "check": "g1",
+    "file": "research/02-analysis.md",
+    "op": "text_replace",
+    "args": [
+      "근거: R2",
+      "근거: R9"
+    ],
+    "expect": "G1-4"
+  },
+  {
+    "id": "G2-1",
+    "check": "g2",
+    "file": "spec/03-screen-spec.md",
+    "op": "json_set",
+    "args": [
+      "screens[0].screen",
+      "다른 화면"
+    ],
+    "expect": "G2-1"
+  },
+  {
+    "id": "G2-2",
+    "check": "g2",
+    "file": "spec/03-screen-spec.md",
+    "op": "json_set",
+    "args": [
+      "screens[0].roles",
+      [
+        "superuser"
+      ]
+    ],
+    "expect": "G2-2"
+  },
+  {
+    "id": "G2-3",
+    "check": "g2",
+    "file": "spec/03-screen-spec.md",
+    "op": "text_append",
+    "args": [
+      "\n허들링 픽 화면을 둔다.\n"
+    ],
+    "expect": "G2-3"
+  },
+  {
+    "id": "SVC-1-g2",
+    "check": "g2",
+    "file": "spec/03-screen-spec.md",
+    "op": "json_set",
+    "args": [
+      "screens[1].visibility.default",
+      "member_only"
+    ],
+    "expect": "SVC-1"
+  },
+  {
+    "id": "SVC-1-s5",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "op": "json_set",
+    "args": [
+      "screens[1].visibility.default",
+      "member_only"
+    ],
+    "expect": "SVC-1"
+  },
+  {
+    "id": "SVC-2-g2",
+    "check": "g2",
+    "file": "spec/03-screen-spec.md",
+    "op": "json_set",
+    "args": [
+      "screens[1].visibility.options",
+      [
+        "private",
+        "sale_request"
+      ]
+    ],
+    "expect": "SVC-2"
+  },
+  {
+    "id": "SVC-2-s5",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "op": "json_set",
+    "args": [
+      "screens[1].visibility.options",
+      [
+        "private",
+        "sale_request"
+      ]
+    ],
+    "expect": "SVC-2"
+  },
+  {
+    "id": "SVC-3-g2",
+    "check": "g2",
+    "file": "spec/03-screen-spec.md",
+    "op": "json_set",
+    "args": [
+      "screens[3].transitions[0].via_review",
+      false
+    ],
+    "expect": "SVC-3"
+  },
+  {
+    "id": "SVC-3-s5",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "op": "json_set",
+    "args": [
+      "screens[3].transitions[0].via_review",
+      false
+    ],
+    "expect": "SVC-3"
+  },
+  {
+    "id": "SVC-4-g2",
+    "check": "g2",
+    "file": "spec/03-screen-spec.md",
+    "op": "json_set",
+    "args": [
+      "screens[3].review_checklist",
+      [
+        "실제 업무에 써본 것",
+        "결과 예시가 있는 것",
+        "사용 방법이 명확한 것",
+        "초보자가 따라할 수 있는 것",
+        "특정 툴/버전/환경 조건이 적혀 있는 것",
+        "개인정보/고객정보/회사기밀이 없는 것",
+        "구매자가 바로 써볼 수 있는 것"
+      ]
+    ],
+    "expect": "SVC-4"
+  },
+  {
+    "id": "SVC-4-s5",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "op": "json_set",
+    "args": [
+      "screens[3].review_checklist",
+      [
+        "실제 업무에 써본 것",
+        "결과 예시가 있는 것",
+        "사용 방법이 명확한 것",
+        "초보자가 따라할 수 있는 것",
+        "특정 툴/버전/환경 조건이 적혀 있는 것",
+        "개인정보/고객정보/회사기밀이 없는 것",
+        "구매자가 바로 써볼 수 있는 것"
+      ]
+    ],
+    "expect": "SVC-4"
+  },
+  {
+    "id": "SVC-5-g2",
+    "check": "g2",
+    "file": "spec/03-screen-spec.md",
+    "op": "json_set",
+    "args": [
+      "screens[3].approve_enabled_before_checklist_complete",
+      true
+    ],
+    "expect": "SVC-5"
+  },
+  {
+    "id": "SVC-5-s5",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "op": "json_set",
+    "args": [
+      "screens[3].approve_enabled_before_checklist_complete",
+      true
+    ],
+    "expect": "SVC-5"
+  },
+  {
+    "id": "G3-1",
+    "check": "g3",
+    "file": "concept/04-keyscreens.md",
+    "op": "json_set",
+    "args": [
+      "frames",
+      [
+        {
+          "name": "키스크린1",
+          "width": 390,
+          "height": 844
+        }
+      ]
+    ],
+    "expect": "G3-1"
+  },
+  {
+    "id": "G3-2",
+    "check": "g3",
+    "file": "concept/04-keyscreens.md",
+    "op": "json_set",
+    "args": [
+      "frames[0].width",
+      375
+    ],
+    "expect": "G3-2"
+  },
+  {
+    "id": "G3-3",
+    "check": "g3",
+    "file": "state.json",
+    "op": "json_set",
+    "args": [
+      "g3_approved",
+      false
+    ],
+    "expect": "G3-3"
+  },
+  {
+    "id": "D-1",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "op": "json_set",
+    "args": [
+      "frames[0].nodes[0].font_weight",
+      600
+    ],
+    "expect": "D-1"
+  },
+  {
+    "id": "D-2",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "op": "json_set",
+    "args": [
+      "frames[0].nodes[3].radius",
+      20
+    ],
+    "expect": "D-2"
+  },
+  {
+    "id": "D-2-icon",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "op": "json_set",
+    "args": [
+      "frames[0].nodes[4].radius_ratio",
+      0.2
+    ],
+    "expect": "D-2"
+  },
+  {
+    "id": "D-3",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "op": "json_set",
+    "args": [
+      "frames[0].nodes[3].shadows",
+      1
+    ],
+    "expect": "D-3"
+  },
+  {
+    "id": "D-4",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "op": "json_set",
+    "args": [
+      "frames[0].nodes[2].radius",
+      16
+    ],
+    "expect": "D-4"
+  },
+  {
+    "id": "D-5",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "op": "json_set",
+    "args": [
+      "frames[0].nodes[0].letter_spacing",
+      -0.5
+    ],
+    "expect": "D-5"
+  },
+  {
+    "id": "D-6",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "op": "json_set",
+    "args": [
+      "frames[0].nodes[3].fill",
+      "#ff0000"
+    ],
+    "expect": "D-6"
+  },
+  {
+    "id": "D-7-button",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "op": "json_set",
+    "args": [
+      "frames[0].nodes[2].fill",
+      "#0066ff"
+    ],
+    "expect": "D-7"
+  },
+  {
+    "id": "D-7-count",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "expect": "D-7",
+    "ops": [
+      {
+        "op": "json_set",
+        "args": [
+          "frames[0].nodes[0].text_color",
+          "#0066ff"
+        ]
+      },
+      {
+        "op": "json_set",
+        "args": [
+          "frames[0].nodes[1].text_color",
+          "#0066ff"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "D-8-gap",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "op": "json_set",
+    "args": [
+      "frames[0].nodes[3].gap",
+      13
+    ],
+    "expect": "D-8"
+  },
+  {
+    "id": "D-8-side",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "op": "json_set",
+    "args": [
+      "frames[0].side_padding.left",
+      20
+    ],
+    "expect": "D-8"
+  },
+  {
+    "id": "FRM-1-selected-label",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "ops": [
+      {
+        "op": "json_set",
+        "args": [
+          "frames[1].nodes[2].text",
+          "멤버 공개"
+        ]
+      }
+    ],
+    "expect": "FRM-1"
+  },
+  {
+    "id": "FRM-1-two-selected",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "ops": [
+      {
+        "op": "json_set",
+        "args": [
+          "frames[1].nodes[4].variant.State",
+          "Selected"
+        ]
+      }
+    ],
+    "expect": "FRM-1"
+  },
+  {
+    "id": "FRM-2-sale-in-paid",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "ops": [
+      {
+        "op": "json_set",
+        "args": [
+          "frames[1].nodes[5].text",
+          "판매 신청"
+        ]
+      }
+    ],
+    "expect": "FRM-2"
+  },
+  {
+    "id": "FRM-0-unknown-variant",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "ops": [
+      {
+        "op": "json_set",
+        "args": [
+          "frames[1].variant",
+          "guest"
+        ]
+      }
+    ],
+    "expect": "FRM-0"
+  },
+  {
+    "id": "FRM-0-no-radio",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "ops": [
+      {
+        "op": "json_set",
+        "args": [
+          "frames[1].nodes[1].component",
+          "card"
+        ]
+      },
+      {
+        "op": "json_set",
+        "args": [
+          "frames[1].nodes[4].component",
+          "card"
+        ]
+      }
+    ],
+    "expect": "FRM-0"
+  },
+  {
+    "id": "FRM-3-approve-enabled",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "ops": [
+      {
+        "op": "json_set",
+        "args": [
+          "frames[3].nodes[19].component",
+          "button-primary"
+        ]
+      }
+    ],
+    "expect": "FRM-3"
+  },
+  {
+    "id": "FRM-3-no-approve",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "ops": [
+      {
+        "op": "json_set",
+        "args": [
+          "frames[3].nodes[20].text",
+          "확인"
+        ]
+      }
+    ],
+    "expect": "FRM-3"
+  },
+  {
+    "id": "FRM-4-missing-item",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "ops": [
+      {
+        "op": "json_set",
+        "args": [
+          "frames[3].nodes[16].text",
+          "다른 문구"
+        ]
+      }
+    ],
+    "expect": "FRM-4"
+  },
+  {
+    "id": "FRM-4-row-count",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "ops": [
+      {
+        "op": "json_set",
+        "args": [
+          "frames[3].nodes[15].variant.Kind",
+          "All"
+        ]
+      }
+    ],
+    "expect": "FRM-4"
+  },
+  {
+    "id": "FRM-frame-missing",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "ops": [
+      {
+        "op": "json_set",
+        "args": [
+          "frames",
+          []
+        ]
+      }
+    ],
+    "expect": "FRM-0"
+  },
+  {
+    "id": "FRM-pass-all-checked",
+    "check": "s5",
+    "file": "build/design-export.json",
+    "expect": "PASS",
+    "ops": [
+      {
+        "op": "json_set",
+        "args": [
+          "frames[3].nodes[1].variant.State",
+          "Checked"
+        ]
+      },
+      {
+        "op": "json_set",
+        "args": [
+          "frames[3].nodes[3].variant.State",
+          "Checked"
+        ]
+      },
+      {
+        "op": "json_set",
+        "args": [
+          "frames[3].nodes[5].variant.State",
+          "Checked"
+        ]
+      },
+      {
+        "op": "json_set",
+        "args": [
+          "frames[3].nodes[7].variant.State",
+          "Checked"
+        ]
+      },
+      {
+        "op": "json_set",
+        "args": [
+          "frames[3].nodes[9].variant.State",
+          "Checked"
+        ]
+      },
+      {
+        "op": "json_set",
+        "args": [
+          "frames[3].nodes[11].variant.State",
+          "Checked"
+        ]
+      },
+      {
+        "op": "json_set",
+        "args": [
+          "frames[3].nodes[13].variant.State",
+          "Checked"
+        ]
+      },
+      {
+        "op": "json_set",
+        "args": [
+          "frames[3].nodes[15].variant.State",
+          "Checked"
+        ]
+      },
+      {
+        "op": "json_set",
+        "args": [
+          "frames[3].nodes[17].variant.State",
+          "Checked"
+        ]
+      },
+      {
+        "op": "json_set",
+        "args": [
+          "frames[3].nodes[19].component",
+          "button-primary"
+        ]
+      }
+    ]
+  }
+]

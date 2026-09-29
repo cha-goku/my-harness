@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "note": "숫자 값의 기준 (SSOT). design.md는 설명 문서다. 값이 다르면 `check.py docs-sync`가 실패한다.",
+  "tokens": {
+    "colors": {
+      "primary": "#141414",
+      "ink": "#141414",
+      "ink-soft": "#262626",
+      "canvas": "#ffffff",
+      "canvas-soft": "#f3f3f3",
+      "field": "#ececec",
+      "hairline-soft": "#f0f0f0",
+      "hairline": "#e0e0e0",
+      "text-muted": "#707070",
+      "text-faint": "#adadad",
+      "accent": "#0066ff",
+      "on-primary": "#ffffff"
+    },
+    "extra_colors": ["rgba(115,115,115,0.56)"],
+    "radius": [0, 16, 24, 9999],
+    "app_icon_radius_ratio": 0.3,
+    "app_icon_radius_tolerance": 0.005,
+    "font_weights": [300, 400, 700],
+    "spacing_values": [4, 8, 12, 16, 24, 32, 48, 64],
+    "spacing_step": 4,
+    "frame": { "width": 390, "height": 844, "side_padding": 16 }
+  },
+  "design_rules": {
+    "shadow_exceptions": ["segmented-control-active"],
+    "pill_kinds": ["button"],
+    "pill_radius": 9999,
+    "letter_spacing": 0,
+    "accent": { "max_per_frame": 2, "forbidden_fill_kinds": ["button"] }
+  },
+  "g1": {
+    "min_references": 5,
+    "min_reflections": 1,
+    "reference_url_contains": "uibowl"
+  },
+  "g2": {
+    "roles": ["guest", "free", "paid", "seller", "admin"],
+    "mvp_excluded_terms": ["허들링 픽", "구매", "피드백", "수익", "판매 중", "판매 중지"],
+    "excluded_terms_allowlist": ["구매자가 바로 써볼 수 있는 것"]
+  },
+  "g3": { "min_keyscreens": 2, "max_keyscreens": 3 },
+  "frame_checks": {
+    "radio_component": "radio-option",
+    "checklist_component": "checkbox-row",
+    "selected_state": "Selected",
+    "checked_state": "Checked",
+    "checklist_item_kinds": ["Item", "Required"],
+    "default_option_label": "비공개",
+    "sale_option_label": "판매 신청",
+    "approve_label": "승인",
+    "disabled_component": "button-primary-disabled"
+  },
+  "service": {
+    "default_visibility": "private",
+    "sale_option": "sale_request",
+    "sale_roles": ["seller"],
+    "approved_status": "approved",
+    "checklist": [
+      { "text": "실제 업무에 써본 것", "keyword": "실제 업무" },
+      { "text": "결과 예시가 있는 것", "keyword": "결과 예시" },
+      { "text": "사용 방법이 명확한 것", "keyword": "사용 방법" },
+      { "text": "초보자가 따라할 수 있는 것", "keyword": "초보자" },
+      { "text": "특정 툴/버전/환경 조건이 적혀 있는 것", "keyword": "툴" },
+      { "text": "개인정보/고객정보/회사기밀이 없는 것", "keyword": "개인정보" },
+      { "text": "저작권 문제가 없는 것", "keyword": "저작권" },
+      { "text": "구매자가 바로 써볼 수 있는 것", "keyword": "바로 써볼" }
+    ]
+  }
+}
